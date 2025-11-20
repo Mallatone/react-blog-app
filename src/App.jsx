@@ -6,7 +6,7 @@ import ContactPage from './contacts/ContactPage';
 import CommonLayout from './layouts/CommonLayout';
 import PostList from './postList/PostList';
 import Homepage from './homepage/Homepage';
-import Login from './login/login';
+import Login from './login/Login';
 import { AuthProvider } from './authWrapper/AuthProvider';
 
 
