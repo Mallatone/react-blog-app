@@ -5,7 +5,8 @@ import { useNavigate } from 'react-router';
 function Login() {
     const navigate = useNavigate();
     const { login } = useAuth();
-    const username = useUsername();
+     const userLogin = 'test';
+    const userPassword = '123';
 
     const [userData, setUserData] = useState({
         username: "",
@@ -14,8 +15,15 @@ function Login() {
 
     const onSubmit = (e) => {
         e.preventDefault();
+
         
-        login(userData.username, userData.password);
+        if (userData.username === userLogin && userData.password === userPassword) {
+            login(userData.username, userData.password);
+        } else {
+            alert("Invalid Username or Password.");
+            return;
+        }
+        
         navigate('/posts');
     }
     return (
